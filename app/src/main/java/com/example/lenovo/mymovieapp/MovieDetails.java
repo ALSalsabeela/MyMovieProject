@@ -1,8 +1,8 @@
 package com.example.lenovo.mymovieapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -12,6 +12,14 @@ public class MovieDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
+//        Bundle extras = intent.getBundleExtra("mymovie");
+//        movie= (Movie) extras.getSerializable("movie");
+        Bundle extras = getIntent().getBundleExtra("mymovie");
+        if (null == savedInstanceState) {
+            MovieDetailsFragment movieDetailsFragment = new MovieDetailsFragment();
+            movieDetailsFragment.setArguments(extras);
+            getSupportFragmentManager().beginTransaction().add(R.id.activity_movie, movieDetailsFragment,"o").commit();
+        }
     }
 
 
