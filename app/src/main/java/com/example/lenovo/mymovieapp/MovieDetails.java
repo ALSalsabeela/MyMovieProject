@@ -14,12 +14,12 @@ public class MovieDetails extends AppCompatActivity {
         setContentView(R.layout.activity_movie_details);
 //        Bundle extras = intent.getBundleExtra("mymovie");
 //        movie= (Movie) extras.getSerializable("movie");
-        Bundle extras = getIntent().getBundleExtra("mymovie");
-        if (null == savedInstanceState) {
-            MovieDetailsFragment movieDetailsFragment = new MovieDetailsFragment();
-            movieDetailsFragment.setArguments(extras);
-            getSupportFragmentManager().beginTransaction().add(R.id.activity_movie, movieDetailsFragment,"o").commit();
-        }
+//        Bundle extras = getIntent().getBundleExtra("movie");
+//        if (null == savedInstanceState) {
+//            MovieDetailsFragment movieDetailsFragment = new MovieDetailsFragment();
+//            movieDetailsFragment.setArguments(extras);
+//            getSupportFragmentManager().beginTransaction().add(R.id.activity_movie, movieDetailsFragment,"o").commit();
+//        }
     }
 
 

@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements DetailInterface{
             Bundle b = new Bundle();
             b.putSerializable("movie", m);
             Intent intent = new Intent(MainActivity.this, MovieDetails.class);
-            intent.putExtra("mymovie", b);
+            // Send Extras of the Serializable without key not just Extra
+            intent.putExtras(b);
             startActivity(intent);
         }
     }
